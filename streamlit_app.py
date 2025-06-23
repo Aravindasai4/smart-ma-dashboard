@@ -13,7 +13,7 @@ with st.form("chart_form"):
     submitted = st.form_submit_button("📥 Submit")
 
 def get_stock_data(symbol):
-    url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&outputsize=full&apikey={API_KEY}"
+    url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&outputsize=full&apikey={9WHK4JM9F91A4Y9S}"
     response = requests.get(url)
     data = response.json()
 
