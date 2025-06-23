@@ -6,14 +6,15 @@ import plotly.graph_objects as go
 st.set_page_config(layout="wide")
 st.title("📊 Smart MA Dashboard (Alpha Vantage Powered)")
 
-API_KEY = "9WHK"  # Replace with your real API key if rotating later
+API_KEY = "9WHK4JM9F91A4Y9S"  # Replace with your real API key if rotating later
 
 with st.form("chart_form"):
     ticker = st.selectbox("Select a stock", ["AAPL", "TSLA", "NVDA", "MSFT", "GOOGL", "AMZN", "META"], index=0)
     submitted = st.form_submit_button("📥 Submit")
 
 def get_stock_data(symbol):
-    url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&outputsize=full&apikey={9WHK4JM9F91A4Y9S}"
+    url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&outputsize=full&apikey={API_KEY}"
+
     response = requests.get(url)
     data = response.json()
 
